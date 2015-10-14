@@ -1,0 +1,35 @@
+# Copyright 2015 Google, Inc.
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+: main
+
+# Boilerplate code, setting up "i".
+i := main
+v2 := 6
+i += v2
+
+# The happiest instructions.
+v6 := 00  
+v1 <<= v7
+
+# Check out the 14 first registers, they might be cool.
+load vd
+save v0 - vd
+
+# Draw!
+ve += 10
+sprite ve vc 4
+
+# Try removing this. It's fun!
+scroll-down 1
