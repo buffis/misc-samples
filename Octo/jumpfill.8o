@@ -1,0 +1,33 @@
+# Copyright 2015 Google, Inc.
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+:const NICE_ADDRESS 550
+
+: main
+i := 13     v1 := -1    v4 := -1
+
+v0 := 14    v3 +=  1    v4 +=  1     jump NICE_ADDRESS
+v0 := 22    v3 += -1    v4 +=  1     jump NICE_ADDRESS
+v0 := 30    v3 += -1    v4 += -1     jump NICE_ADDRESS
+v0 := 6     v3 +=  1    v4 += -1     jump NICE_ADDRESS
+
+v1 += v3    v2 += v4
+
+sprite v1 v2 1
+if vf == 0 then jump NICE_ADDRESS
+sprite v1 v2 1
+
+v1 -= v3    v2 -= v4
+
+jump0 main
