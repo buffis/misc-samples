@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Visible at
+# http://johnearnest.github.io/Octo/index.html?gist=2b767e2162f73f6e7652
 : main
   hires
 loop
@@ -22,18 +24,16 @@ loop
   v6 -= v0
   v4 -= v1
 
-  sprite v2 v1 4
-  sprite v2 v4 4
+  sprite v2 v1 12
+  sprite v2 v4 12
   plane 3
-  sprite v6 v1 4
-  sprite v6 v4 4
+  sprite v6 v1 12
+  sprite v6 v4 12
 
   v0 += 1
   v1 += 1
-  if v0 == 64 begin
+  if v0 == 64 then
     v0 += 1
-  end
-  if v0 == 128 begin
-    v0 := 1 
-  end
+  if v0 == 128 then
+    v0 := 0 
 again
